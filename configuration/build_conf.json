@@ -1,0 +1,8 @@
+{
+  "build": {
+    "pythonlibrary": "pip install -e ."
+  },
+  "release": {
+    "pythonlibrary": "pip install -e ."
+  }
+}
