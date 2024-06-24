@@ -1,2 +1,4 @@
 requests
 gitpython
+setuptools>=40.8
+wheel
