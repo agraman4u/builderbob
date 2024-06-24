@@ -1,23 +1,16 @@
-import argparse
-import json
+import sys
 
 from builderbob.config import Config
 from builderbob.utils.builder import Builder
 
 
-def main():
-	parser = argparse.ArgumentParser(description="Build and release packages")
-	parser.add_argument('command', choices=['build', 'release'], help="Command to execute")
-	args = parser.parse_args()
+def main(*args):
+	args = sys.argv[1:]
 	print("Running command with args:", args)
 
 	config = Config()
 	builder = Builder(config)
-
-	if args.command == 'build':
-		builder.build()
-	elif args.command == 'release':
-		builder.release()
+	builder.execute(args[0], *args[1:])
 
 	print(config)
 	return 0

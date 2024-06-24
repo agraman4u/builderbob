@@ -1,8 +1,44 @@
 {
-  "build": {
-    "pythonlibrary": "pip install -e ."
+  "build-system": {
+    "pythonlibrary": "pip",
+    "javalibrary": "./gradlew",
+    "scalalibrary": "./gradlew"
   },
-  "release": {
-    "pythonlibrary": "pip install -e ."
+  "commands": {
+    "pythonlibrary": [
+      "clean",
+      "install",
+      "test",
+      "build",
+      "release"
+    ],
+    "javalibrary": [
+      "clean",
+      "install",
+      "test",
+      "build",
+      "release"
+    ],
+    "scalalibrary": [
+      "clean",
+      "install",
+      "test",
+      "build",
+      "release"
+    ]
+  },
+  "commandOverrides": {
+    "clean": {
+    },
+    "install": {
+    },
+    "test": {
+    },
+    "build": {
+      "pythonlibrary": "install -e ."
+    },
+    "release": {
+      "pythonlibrary": "install -e ."
+    }
   }
 }
