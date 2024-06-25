@@ -11,7 +11,7 @@ requirements = read_requirements('requirements.txt')
 
 setup(
 	name='builderbob',
-	version='0.1',
+	version='0.0.1',
 	packages=find_packages(where="src"),
 	package_dir={'': 'src'},
 	author='Aman Agrawal',
