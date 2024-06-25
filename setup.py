@@ -33,7 +33,7 @@ setup(
 	],
 	package_data={
 		'': ['*.txt', '*.rst'],
-		'builderbob': ['data/*', "configuration/*"],
+		'builderbob': ['data/*', "configuration/*", "requirements.txt"],
 	},
 	python_requires='>=3.10',
 	zip_safe=False

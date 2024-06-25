@@ -6,6 +6,8 @@ from builderbob.utils.builder import Builder
 
 def main(*args):
 	args = sys.argv[1:]
+	if not args:
+		args = ["build"]
 	print("Running command with args:", args)
 
 	config = Config()
