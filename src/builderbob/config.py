@@ -8,7 +8,6 @@ class Config:
 	def __init__(self, config_file=CLIENT_CONFIG_FILE):
 		self.config_file = config_file
 		self.config = self.load_config()
-		print("Loaded", config_file, self.config)
 
 	def load_config(self):
 		if not os.path.exists(self.config_file):
