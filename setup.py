@@ -11,7 +11,7 @@ requirements = read_requirements('requirements.txt')
 
 setup(
 	name='builderbob',
-	version='0.1',
+	version='0.0.1',
 	packages=find_packages(where="src"),
 	package_dir={'': 'src'},
 	author='Aman Agrawal',
@@ -33,7 +33,7 @@ setup(
 	],
 	package_data={
 		'': ['*.txt', '*.rst'],
-		'builderbob': ['data/*', "configuration/*"],
+		'builderbob': ['data/*', "configuration/*", "*.txt"],
 	},
 	python_requires='>=3.10',
 	zip_safe=False

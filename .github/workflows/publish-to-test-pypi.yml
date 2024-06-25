@@ -13,14 +13,13 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: "3.x"
-    - name: Install pypa/build
+    - name: Install dependencies
       run: >-
-        python3 -m
-        pip install
-        build
-        --user
+          python3 -m
+          pip install -r requirements.txt
+          --user
     - name: Build a binary wheel and a source tarball
-      run: python3 -m build
+      run: python3 setup.py sdist bdist_wheel
     - name: Store the distribution packages
       uses: actions/upload-artifact@v3
       with:
@@ -38,7 +37,7 @@ jobs:
       name: pypi
       url: https://pypi.org/p/builderbob
     permissions:
-      id-token: write  # IMPORTANT: mandatory for trusted publishing
+      id-token: write
 
     steps:
     - name: Download all the dists
@@ -100,7 +99,7 @@ jobs:
 
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/builderbob
+      url: https://test.pypi.org/p/<package-name>
 
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
