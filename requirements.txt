@@ -2,3 +2,5 @@ requests
 gitpython
 setuptools>=40.8
 wheel
+beautifulsoup4
+twine
