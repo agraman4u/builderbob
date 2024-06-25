@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-      - development
-    branches-ignore:
-      - users/**
     paths:
       - 'src/**'
       - '!src/experimental/**'
